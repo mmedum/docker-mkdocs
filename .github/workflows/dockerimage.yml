@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Publish Docker Image to GPR
-      uses: machine-learning-apps/gpr-docker-publish@master
+      uses: elgohr/Publish-Docker-Github-Action@master
       id: docker
       with:
         name: mmedum/docker-mkdocs
