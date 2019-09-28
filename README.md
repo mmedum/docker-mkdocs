@@ -1,5 +1,4 @@
-General documentation from hungry group based on mkdocs, at the moment the
-documentation is served directly through mkdocs.
+Template for getting mkdocs running through a docker container.
 
 ## Building
 
