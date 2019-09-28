@@ -11,13 +11,13 @@ jobs:
     steps:
     - name: Copy Repo Files
       uses: actions/checkout@master
-      
+
     - name: Publish Docker Image to GPR
-      uses: mmedum/docker-mkdocs@master
+      uses: machine-learning-apps/gpr-docker-publish@master
       id: docker
       with:
         USERNAME: ${{ secrets.DOCKER_USERNAME }}
         PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        IMAGE_NAME: 'test-docker-action'
+        IMAGE_NAME: 'docker-mkdocs'
         DOCKERFILE_PATH: 'mmedum/docker-mkdocs'
         BUILD_CONTEXT: 'mmedum/'

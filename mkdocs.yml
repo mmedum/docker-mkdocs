@@ -3,12 +3,11 @@ site_name: 'Documentation'
 site_description: 'General documentation'
 site_author: 'Mark Medum Bundgaard'
 copyright: 'Copyright &copy; 2019 Documentation'
-site_url: http://localhost
+site_url: 'http://localhost'
 
 # Github repository
-repo_name: mmedum/docker-mkdocs
-repo_url: https://github.com/mmedum/docker-mkdocs
-edit_uri: ""
+repo_name: 'mmedum/docker-mkdocs'
+repo_url: 'https://github.com/mmedum/docker-mkdocs'
 
 # Configuration
 theme:
@@ -33,7 +32,7 @@ plugins:
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/mmedum/docker-mkdocs'
+      link: 'https://github.com/mmedum'
 
 # Extensions
 markdown_extensions:
