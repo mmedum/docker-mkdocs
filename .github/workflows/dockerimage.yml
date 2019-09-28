@@ -16,8 +16,7 @@ jobs:
       uses: machine-learning-apps/gpr-docker-publish@master
       id: docker
       with:
-        USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        IMAGE_NAME: 'docker-mkdocs'
-        DOCKERFILE_PATH: 'mmedum/docker-mkdocs'
-        BUILD_CONTEXT: 'mmedum/'
+        name: mmedum/docker-mkdocs
+        username: ${{ secrets.GIT_DOCKER_USER }}
+        password: ${{ secrets.GIT_DOCKER_PASS }}
+        registry: docker.pkg.github.com
