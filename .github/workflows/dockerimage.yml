@@ -16,7 +16,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       id: docker
       with:
-        name: docker.pkg.github.com/mmedum/mkdocs
+        name: docker.pkg.github.com/mmedum/docker-mkdocs/mkdocs
         username: ${{ secrets.GIT_DOCKER_USER }}
         password: ${{ secrets.GIT_DOCKER_PASS }}
         registry: docker.pkg.github.com
