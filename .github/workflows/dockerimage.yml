@@ -19,5 +19,5 @@ jobs:
         USERNAME: ${{ secrets.DOCKER_USERNAME }}
         PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         IMAGE_NAME: 'test-docker-action'
-        DOCKERFILE_PATH: 'mmedum/'
+        DOCKERFILE_PATH: 'mmedum/docker-mkdocs'
         BUILD_CONTEXT: 'mmedum/'
