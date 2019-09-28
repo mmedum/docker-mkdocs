@@ -1,0 +1,58 @@
+# Project information
+site_name: 'Documentation'
+site_description: 'General documentation'
+site_author: 'Mark Medum Bundgaard'
+copyright: 'Copyright &copy; 2019 Documentation'
+site_url: http://localhost
+
+# Github repository
+repo_name: mmedum/docker-mkdocs
+repo_url: https://github.com/mmedum/docker-mkdocs
+edit_uri: ""
+
+# Configuration
+theme:
+  name: 'readthedocs'
+  language: 'en'
+  logo: 'images/logo.png'
+
+  feature:
+    tabs: true
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font: false
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/mmedum/docker-mkdocs'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: true
+  - toc:
+      permalink: true
+  - nl2br
+  - sane_lists
+  - footnotes
+  - pymdownx.betterem
+  - pymdownx.details
+  - pymdownx.escapeall
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md

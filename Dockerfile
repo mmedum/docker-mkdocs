@@ -1,14 +1,14 @@
-FROM python
-MAINTAINER Mark Medum Bundgaard <mmedum@gmail.com>
+FROM python:3.7
+LABEL maintainer="Mark Medum Bundgaard mmedum@gmail.com"
 
-WORKDIR /usr/src/app
+WORKDIR /documentation
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements.txt
+COPY docs docs
+COPY images images
+COPY mkdocs.yml mkdocs.yml
 
-WORKDIR /docs
-
-EXPOSE 8000
+RUN pip install -r requirements.txt
 
 ENTRYPOINT ["mkdocs"]
 CMD ["serve", "--dev-addr=0.0.0.0:8000"]
