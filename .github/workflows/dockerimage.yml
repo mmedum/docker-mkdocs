@@ -1,0 +1,23 @@
+name: Publish Docker image to GitHub Package Registry and Docker Hub
+
+on: [push]
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Copy Repo Files
+      uses: actions/checkout@master
+      
+    - name: Publish Docker Image to GPR
+      uses: mmedum/docker-mkdocs@master
+      id: docker
+      with:
+        USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        IMAGE_NAME: 'test-docker-action'
+        DOCKERFILE_PATH: 'mmedum/'
+        BUILD_CONTEXT: 'mmedum/'
