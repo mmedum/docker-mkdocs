@@ -1,22 +1,18 @@
+---
 name: Publish Docker image to GitHub Package Registry and Docker Hub
-
 on: [push]
-
 jobs:
-
   build:
- 
     runs-on: ubuntu-latest
- 
     steps:
-    - name: Copy Repo Files
-      uses: actions/checkout@master
+      - name: Copy Repo Files
+        uses: actions/checkout@master
 
-    - name: Publish Docker Image to GPR
-      uses: elgohr/Publish-Docker-Github-Action@v5
-      id: docker
-      with:
-        name: docker.pkg.github.com/mmedum/docker-mkdocs/mkdocs
-        username: ${{ secrets.GIT_DOCKER_USER }}
-        password: ${{ secrets.GIT_DOCKER_PASS }}
-        registry: docker.pkg.github.com
+      - name: Publish Docker Image to GPR
+        uses: elgohr/Publish-Docker-Github-Action@v5
+        id: docker
+        with:
+          name: docker.pkg.github.com/mmedum/docker-mkdocs/mkdocs
+          username: ${{ secrets.GIT_DOCKER_USER }}
+          password: ${{ secrets.GIT_DOCKER_PASS }}
+          registry: docker.pkg.github.com
