@@ -8,7 +8,7 @@ COPY docs docs
 COPY images images
 COPY mkdocs.yml mkdocs.yml
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["mkdocs"]
 CMD ["serve", "--dev-addr=0.0.0.0:8000"]

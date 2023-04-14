@@ -1,3 +1,5 @@
+# MKDocs
+
 Template for getting mkdocs running through a docker container.
 
 ## Building
